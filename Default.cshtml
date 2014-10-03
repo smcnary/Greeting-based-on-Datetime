@@ -1,0 +1,31 @@
+﻿
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>My Site's Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <style>
+            .bold { font-weight: bold;}
+            .italic {font-style:  italic;}
+        </style>
+    </head>
+    <body>
+    @{
+        var hour = DateTime.Now.Hour;
+        var greeting = string.Empty;
+        
+        if (hour > 17) {
+            greeting = "Good Evening";
+        }  else if ( hour > 12) {
+            greeting = "Good Afternoon";
+        } else {
+            greeting = "Good Morning";
+        }
+
+    }
+        <h1>@greeting</h1>
+    </body>
+</html>
